@@ -1,5 +1,6 @@
 package adessoassessment.carportal;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -9,5 +10,4 @@ public class CarportalApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CarportalApplication.class, args);
 	}
-
 }
