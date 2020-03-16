@@ -17,11 +17,11 @@ public class Features {
     public long getId() {
         return id;
     }
-
     public String getFeatures() {
         return name;
     }
     public String getModels() {
         return models;
     }
+
 }
