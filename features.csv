@@ -1,0 +1,9 @@
+﻿id;name;cost;models
+1;Climate Control;600;"X3, X5, A3 Convertible, A8, Golf"
+2;Seat Heating;300;"X5, A3 Convertible, A8, Polo, Golf"
+3;Parking Sensors;1200;"X5, A8, Golf"
+4;Multimedia System;1000;"X3, X5, A1, A3 Convertible, A8, Polo, Golf"
+5;Panoramic Sunroof;450;"i3, X3, X5, A8, Polo, Golf"
+6;Turbo;2500;"X5, A8"
+7;Cigarette Lighter;5;"i3, X3, X5, A1, A3 Convertible, A8, Polo, Golf"
+8;Airbags;150;"i3, X3, X5, A1, A3 Convertible, A8, Polo, Golf"

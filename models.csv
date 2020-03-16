@@ -1,0 +1,10 @@
+﻿id;name;base_cost;manufacturer;available_features
+1;i3;40000;BMW;"Panoramic Sunroof, Cigarette Lighter, Airbags"
+2;X3;60000;BMW;"Climate Control, Multimedia System, Panoramic Sunroof, Cigarette Lighter, Airbags"
+3;X5;80000;BMW;"Climate Control, Seat Heating, Parking Sensors, Multimedia System, Panoramic Sunroof, Turbo, Cigarette Lighter, Airbags"
+4;A1;25000;Audi;"Multimedia System, Cigarette Lighter, Airbags"
+5;A3 Convertible;35000;Audi;"Climate Control, Seat Heating, Multimedia System, Cigarette Lighter, Airbags"
+6;A8;110000;Audi;"Climate Control, Seat Heating, Parking Sensors, Multimedia System, Panoramic Sunroof, Turbo, Cigarette Lighter, Airbags"
+7;up!;10000;Volkswagen;
+8;Polo;15000;Volkswagen;"Seat Heating, Multimedia System, Panoramic Sunroof, Cigarette Lighter, Airbags"
+9;Golf;25000;Volkswagen;"Climate Control, Seat Heating, Parking Sensors, Multimedia System, Panoramic Sunroof, Cigarette Lighter, Airbags"
