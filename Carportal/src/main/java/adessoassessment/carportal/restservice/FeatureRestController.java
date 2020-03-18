@@ -1,34 +1,37 @@
 package adessoassessment.carportal.restservice;
 
 
-import org.apache.velocity.exception.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping()
+@RequestMapping("/cars")
 public class FeatureRestController {
 
     @Autowired
     private FeatureRepository featureRepository;
 
     @GetMapping("/features")
-    public List<Features> getAllFeatures() {
-        return featureRepository.findAll() ;
+    List<Features> all() {
+        return featureRepository.findAll();
+    }
+
+    @PostMapping("/features")
+    Features newFeature(@RequestBody Features newFeature) {
+        return featureRepository.save(newFeature);
     }
 
     @GetMapping("/features/{id}")
-    public ResponseEntity<Features> getNameById(@PathVariable(value = "id") int id) throws ResourceNotFoundException {
-        Features features =
-                featureRepository
-                        .findById(id)
-                        .orElseThrow(() -> new ResourceNotFoundException("No model is found on :: " + id));
-        return ResponseEntity.ok().body(features);
+    Features one(@PathVariable int id) {
+        return featureRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException(String.valueOf(id)));
     }
+
 }
