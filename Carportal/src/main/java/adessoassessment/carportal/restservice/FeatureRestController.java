@@ -22,14 +22,13 @@ public class FeatureRestController {
     public List<Features> getAllFeatures() {
         return featureRepository.findAll() ;
     }
+
     @GetMapping("/features/{id}")
-    public ResponseEntity<Features> getNameById(@PathVariable(value = "id") Long id)
-        throws ResourceNotFoundException {
+    public ResponseEntity<Features> getNameById(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
         Features features =
                 featureRepository
                         .findById(id)
                         .orElseThrow(() -> new ResourceNotFoundException("No model is found on :: " + id));
         return ResponseEntity.ok().body(features);
     }
-
 }
