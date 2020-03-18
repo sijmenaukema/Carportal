@@ -24,7 +24,7 @@ public class FeatureRestController {
     }
 
     @GetMapping("/features/{id}")
-    public ResponseEntity<Features> getNameById(@PathVariable(value = "id") Long id) throws ResourceNotFoundException {
+    public ResponseEntity<Features> getNameById(@PathVariable(value = "id") int id) throws ResourceNotFoundException {
         Features features =
                 featureRepository
                         .findById(id)

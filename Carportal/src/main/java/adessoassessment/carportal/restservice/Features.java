@@ -17,7 +17,8 @@ public class Features {
 
     @Id
     @Getter
-    private long id;
+    @Setter
+    private int id;
 
     @Column
     @Getter
@@ -32,6 +33,6 @@ public class Features {
     @Column
     @Getter
     @Setter
-    private String[] models;
+    private String models;
 }
 
