@@ -1,27 +1,37 @@
 package adessoassessment.carportal.restservice;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+@Entity
+@Table(name = "features")
+@EntityListeners(AuditingEntityListener.class)
+
 public class Features {
-    private final long id;
-    private final String name;
+
+    @Id
+    @Getter
+    private long id;
+
+    @Column
+    @Getter
+    @Setter
+    private String name;
+
+    @Column
+    @Getter
+    @Setter
     private int cost;
-    private String models;
 
-    public Features(long id, String name, int cost, String models) {
-        this.id = id;
-        this.name = name;
-        this.cost = cost;
-        this.models = models;
-    }
-
-
-    public long getId() {
-        return id;
-    }
-    public String getFeatures() {
-        return name;
-    }
-    public String getModels() {
-        return models;
-    }
-
+    @Column
+    @Getter
+    @Setter
+    private String[] models;
 }
+

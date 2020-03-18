@@ -1,17 +1,22 @@
 package adessoassessment.carportal.restservice;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
+@RequestMapping("/api/v1")
 public class FeatureRestController {
 
-    private static final String template = "Features available, %s!";
+    @Autowired
+    private FeatureRepository featureRepository;
 
     @GetMapping("/features")
-    public Features features(@RequestParam(value = "id")long id, String name, int cost, String models) {
-        return new Features(id, name, cost, models);
+    public List<Features> getAllFeatures(){
+        return featureRepository.findAll() ;
     }
 }
