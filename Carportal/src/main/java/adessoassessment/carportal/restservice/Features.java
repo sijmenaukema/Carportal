@@ -13,24 +13,24 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Table(name = "features")
 @EntityListeners(AuditingEntityListener.class)
 
-public class Features {
+class Features {
 
     @Id
     @Getter
-    @Setter
+    @Column(name = "id")
     private int id;
 
-    @Column
+    @Column(name = "name")
     @Getter
     @Setter
     private String name;
 
-    @Column
+    @Column(name = "cost")
     @Getter
     @Setter
     private int cost;
 
-    @Column
+    @Column(name = "models")
     @Getter
     @Setter
     private String models;
