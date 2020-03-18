@@ -15,8 +15,12 @@ import java.util.List;
 @RequestMapping("/cars")
 public class FeatureRestController {
 
-    @Autowired
+
     private FeatureRepository featureRepository;
+
+    FeatureRestController(FeatureRepository featureRepository) {
+        this.featureRepository = featureRepository;
+    }
 
     @GetMapping("/features")
     List<Features> all() {
@@ -33,5 +37,4 @@ public class FeatureRestController {
         return featureRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException(String.valueOf(id)));
     }
-
 }
